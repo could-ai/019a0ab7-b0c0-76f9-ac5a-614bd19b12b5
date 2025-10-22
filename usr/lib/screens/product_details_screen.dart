@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'product_list_screen.dart';
+import "package:flutter/material.dart";
+import "product_list_screen.dart";
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
@@ -30,7 +30,7 @@ class ProductDetailsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              '$${product.price.toStringAsFixed(2)}',
+              "\$${product.price.toStringAsFixed(2)}",
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
             ),
             const SizedBox(height: 20),
@@ -38,10 +38,10 @@ class ProductDetailsScreen extends StatelessWidget {
               onPressed: () {
                 // Add to cart logic (would need cart provider in real app)
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('${product.name} added to cart!')),
+                  SnackBar(content: Text("${product.name} added to cart!")),
                 );
               },
-              child: const Text('Add to Cart'),
+              child: const Text("Add to Cart"),
             ),
           ],
         ),

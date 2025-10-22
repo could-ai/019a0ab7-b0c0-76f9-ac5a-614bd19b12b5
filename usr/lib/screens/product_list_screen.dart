@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
 class Product {
   final String id;
@@ -26,25 +26,25 @@ class ProductListScreen extends StatefulWidget {
 class _ProductListScreenState extends State<ProductListScreen> {
   final List<Product> products = [
     const Product(
-      id: '1',
-      name: 'Gaming Laptop',
-      description: 'High-performance laptop for gaming',
+      id: "1",
+      name: "Gaming Laptop",
+      description: "High-performance laptop for gaming",
       price: 1299.99,
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl: "https://via.placeholder.com/150",
     ),
     const Product(
-      id: '2',
-      name: 'Business Desktop',
-      description: 'Reliable desktop for office work',
+      id: "2",
+      name: "Business Desktop",
+      description: "Reliable desktop for office work",
       price: 899.99,
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl: "https://via.placeholder.com/150",
     ),
     const Product(
-      id: '3',
-      name: 'MacBook Pro',
-      description: 'Premium laptop for professionals',
+      id: "3",
+      name: "MacBook Pro",
+      description: "Premium laptop for professionals",
       price: 1999.99,
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl: "https://via.placeholder.com/150",
     ),
   ];
 
@@ -52,7 +52,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Computer Products'),
+        title: const Text("Computer Products"),
       ),
       body: ListView.builder(
         itemCount: products.length,
@@ -61,10 +61,10 @@ class _ProductListScreenState extends State<ProductListScreen> {
           return ListTile(
             leading: Image.network(product.imageUrl, width: 50, height: 50),
             title: Text(product.name),
-            subtitle: Text('$${product.price.toStringAsFixed(2)}'),
+            subtitle: Text("\$${product.price.toStringAsFixed(2)}"),
             onTap: () => Navigator.pushNamed(
               context,
-              '/product_details',
+              "/product_details",
               arguments: product,
             ),
           );
